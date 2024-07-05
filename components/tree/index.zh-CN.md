@@ -54,7 +54,7 @@ demo:
 | defaultExpandParent | 默认展开父节点 | boolean | true |  |
 | defaultSelectedKeys | 默认选中的树节点 | string\[] | \[] |  |
 | disabled | 将树禁用 | boolean | false |  |
-| draggable | 设置节点可拖拽，可以通过 `icon: false` 关闭拖拽提示图标 | boolean \| ((node: DataNode) => boolean) \| { icon?: React.ReactNode \| false, nodeDraggable?: (node: DataNode) => boolean } | false | `config`: 4.17.0 |
+| draggable | 设置节点可拖拽，可以通过 `icon: false` 关闭拖拽提示图标 | boolean \| ((node: DataNode) => boolean) \| { icon?: (node: DataNode) => React.ReactNode \| React.ReactNode \| false, nodeDraggable?: (node: DataNode) => boolean } | false | `config`: 4.17.0 |
 | expandedKeys | （受控）展开指定的树节点 | string\[] | \[] |  |
 | fieldNames | 自定义节点 title、key、children 的字段 | object | { title: `title`, key: `key`, children: `children` } | 4.17.0 |
 | filterTreeNode | 按需筛选树节点（高亮），返回 true | function(node) | - |  |

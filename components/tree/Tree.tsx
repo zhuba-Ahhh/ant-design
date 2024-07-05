@@ -103,7 +103,7 @@ export type TreeNodeNormal = DataNode;
 type DraggableFn = (node: DataNode) => boolean;
 
 interface DraggableConfig {
-  icon?: React.ReactNode | false;
+  icon?: ((node: DataNode) => React.ReactNode) | React.ReactNode | false;
   nodeDraggable?: DraggableFn;
 }
 

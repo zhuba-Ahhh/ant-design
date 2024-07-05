@@ -174,6 +174,16 @@ describe('Tree', () => {
       expect(container.querySelector('.little')).toBeTruthy();
     });
 
+    it('customize icon function', () => {
+      const { container } = render(
+        <Tree
+          treeData={dragTreeData}
+          draggable={{ icon: (node) => node && !node?.children && <span className="little" /> }}
+        />,
+      );
+      expect(container.querySelector('.little')).toBeTruthy();
+    });
+
     it('nodeDraggable', () => {
       const nodeDraggable = jest.fn(() => false);
       render(<Tree treeData={dragTreeData} draggable={{ nodeDraggable }} />);
